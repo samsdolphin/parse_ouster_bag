@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="convert_rosbag" type="parse_bag" name="parse_bag" output="screen">
+        <param name="bag_path" type="string" value="/home/sam/Downloads/horizontal_c2_side_2.bag"/>
+        <param name="write_path" type="string" value="$(find convert_rosbag)/data/"/>
+        <param name="is_img_topic" type="bool" value="false"/>
+        <param name="topic_name" type="string" value="/os_cloud_node/points"/>
+    </node>
+
+</launch>
